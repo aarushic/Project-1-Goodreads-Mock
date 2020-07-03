@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+{% block title %}Bookstore{% endblock %}
+
+{% block head %}Search for a Book!{% endblock %}
+
+{% block para %} {{ username }} {% endblock %}
+
+{% block body %}
+<form action="{{ url_for('search')}}" method="post">
+    <li><input type="text" name="search" placeholder="Search. . ."></li>
+    <div class="btn">
+    <button>Submit</button>
+    </div>
+
+</form>
+
+
+{% for book in books %}
+<a href="{{ url_for('displayinfo', book_isbn=book.isbn) }}" name="book_all" >{{ book }}</a>
+{%endfor%}
+
+
+
+
+
+
+
+{% endblock %}

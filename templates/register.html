@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block title %}Bookstore{% endblock %}
+
+{% block head %}BOOKSTORE
+
+
+{% endblock %}
+
+{% block body %}
+<p>Now login</p>
+<form action="{{ url_for('login')}}" method="post">
+    <li><input type="text" name="username" placeholder="Enter Your Username"></li>
+    <li><input type="text" name="password" placeholder="Enter Your Password"></li>
+    <div class="btn">
+    <button>Submit</button>
+    </div>
+</form>
+{% endblock %}
